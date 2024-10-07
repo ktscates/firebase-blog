@@ -1,0 +1,28 @@
+{
+  "hosting": {
+    "public": "dist/firebase-blogs/browser",
+    "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/auth/index.html"
+      },
+      {
+        "source": "/auth/**",
+        "destination": "/auth/index.html"
+      },
+      {
+        "source": "/posts/**",
+        "destination": "/posts/index.html"
+      },
+      {
+        "source": "/profile/**",
+        "destination": "/profile/index.html"
+      }
+    ]
+  },
+  "firestore": {
+    "rules": "firestore.rules",
+    "indexes": "firestore.indexes.json"
+  }
+}

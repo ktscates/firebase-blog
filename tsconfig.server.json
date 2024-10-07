@@ -1,0 +1,15 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "outDir": "./dist/firebase-blogs/server",
+    "target": "ES2022",
+    "module": "ES2020", // Change to ES2020
+    "types": ["node"],
+    "useDefineForClassFields": true, // Recommended for better class field handling
+    "moduleResolution": "node"
+  },
+  "files": ["src/main.server.ts", "server.ts", "src/app/app.config.server.ts"],
+  "angularCompilerOptions": {
+    "entryModule": false
+  }
+}
